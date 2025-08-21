@@ -7,7 +7,7 @@
 - MOD所需前置为Satchel和HKTool，Satchel不低于0.8.12，HKTool不低于2.2.0.0。
 - 以下所有功能均可在游戏内进行配置，如果不清楚相关功能，建议保持默认设置。
 - 部分bug已经在GodSeekerPlus（寻神者+）中修复，为避免冲突，该MOD没有修复这些bug。
-- 在使用该MOD的过程中，如果遇到了该MOD导致的bug或者希望修复的其他bug，欢迎向我反馈，B站uid：498703420，Discord：QiQi7，QQ群：599201137。
+- 在使用该MOD的过程中，如果遇到了该MOD导致的bug或者希望修复的其他bug，欢迎向我反馈，B站：是柒不是七233，Discord：QiQi7，QQ群：599201137。
 
 
 
