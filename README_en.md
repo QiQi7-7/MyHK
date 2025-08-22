@@ -1,154 +1,153 @@
-An auxiliary mod for Hollow Knight, including three modules: BetterLogic, ExtraFeatures, and BugFixes. This can significantly optimize the gaming experience.
-
-
-#  Instructions
-
-- The dependencies of this mod are Satchel and HKTool, with Satchel version not lower than 0.8.12 and HKTool version not lower than 2.2.0.0.
-- All of the following features are configurable in-game. If you are unclear about the relevant functions, it is recommended to keep the default settings.
-- Some bugs have been fixed in GodSeekerPlus, so the mod does not fix them to avoid conflicts.
-- When using this mod, if you encounter bugs caused by this mod or other bugs that you want to fix, please give me feedback. Bilibili：是柒不是七233, Discord：QiQi7, QQ group：599201137.
+An assisting mod for HK featuring logical optimization, auxiliary functionality, bug fixes. This can improve the gaming experience significantly.
 
 
 
-#  Features Introduction
-
-##  1.BetterLogic
-
-**The content related to this module is not a malicious bug, but it reflects the design shortcomings. All are on by default.**  
-
-###  Feature list
-
-- **HealthManagerFix**  
-  - Description：Fixed damage loss due to frame rate. The invincibility time of enemies after being hit is now always 0.2s, regardless of frame rate.
-  - Additional Notes：Turning on this feature will reduce the duration of Descending Dark's third stage by 0.02s to avoid one more damage. It is highly recommended to turn it on.
-
-- **AbyssalShriekOptimization**  
-  - Description：The direction of the Abyssal Shriek does not change with the change in the direction of the little knight.
-
-- **HowlingWraithsOptimization**  
-  - Description：Optimize the knockback mechanism of the Howling Wraiths to function like the Abyssal Shriek (repulsion to the left and attraction to the right) or to always knock back.
-
-- **DoubleJumpOptimization**  
-  - Description：You can use double jump immediately after attacking.
-
-- **WarpOptimization**  
-  - Description：This will cause some bosses to stop recoiling after teleporting, including Gorb, Soul Warrior, Elder Hu, and No Eyes.
-
-- **DetectionOptimization**  
-  - Description：Added a detection mechanism to some bosses to prevent certain objects from spawning directly on the player, including Hornet Sentinel's Spikes and the Radiance's Orbs.
-
-- **HiveKnightOptimization**  
-  - Description：After the death of the Hive Knight, all the Hivelings die。
-
-- **SlyOptimization**  
-  - Description：Adjusted Sly's Great Slash hitbox to make it more in line with the texture。
+#  Instruction
+- MOD dependency: Satchel (0.8.12 or later), HKTool (2.2.0.0 or later).
+- All following functions can be configured in-game. If not sure about their function, it's suggested to keep them default.
+- Some bugs that GodSeekerPlus fixes are not fixed in this mod to avoid conflicts.
+- If you encounter any bug this mod causes or bugs you want this mod to fix while using this, feel free to report them. Contact: Discord: QiQi7; Bilibili: 是柒不是七233; QQ group: 599201137.
 
 
 
-##  2.ExtraFeatures
+#  Introduction
 
-**This module provides some Extra Features that can be used to assist in practice or actual combat. All are off by default.**  
+##  1. Logical Optimization
 
-###  Feature list
+**These are non-major glitches indicating design deficiency. All are enabled by default.** 
 
-- **RemoveFreezeMoment**  
-  - Description：Removed all freeze moment except for the player's injury.
+###  Feature List
 
-- **ShowStunInfo**  
-  - Description：Show stun hit max, stun combo, combo time.
+- **Hitting Optimizations**
+    - Description: Fixes missing hits caused by frame rate. Now enemies have a fixed 0.2s immune frame independent of frame rate.
+    - Additional Note: Enabling this will also reduce the second burst of DDark by 0.2s to avoid it dealing multiple hits. Suggest enabling this.
 
-- **ShowDestination**  
-  - Description：Displays the destinations where all Dream Warriors move except Marmu.
+- **Abyss Shriek Optimization**
+    - Description: Optimizes the knockback of Abyss Shriek so that it won't be affected by the change in player orientation for the duration..
 
-- **TwoHitKills**  
-  - Description：If an enemy cannot be killed with a single attack, its HP will be reduced to 1, which can be used for testing. This eliminates the need to use debug to adjust damage frequently, and avoids the problems that can be caused by using kill all.
+- **Howling Wraiths Optimization**
+    - Description: Optimizes the knockback of Howling Wraiths so that it follows Abyss Shriek (LS pushes enemies and RS pulls enemies), or pushes enemies backwards no matter how.
 
-- **RemoveForeground**  
-  - Description：Removed part of the foreground in the Collector's Scene.
+- **Double Jump Optimization**
+    - Description: You can now instantly double jump upon a nail attack.
 
--------------------------------------------------------------------------------
+- **Teleport Optimization**
+    - Description: Stop bosses from being knocked back upon teleport, including Gorb, Elder Hu, Soul Warrior, and No Eyes.
 
-##  3.BugFixes
+- **Detection Optimization**
+    - Description: Add player detection for some boss attacks, including Hornet 2's spiked balls and Radiance's Orb.
 
-**The content related to this module is a malicious bug, which reflects a serious design mistake and may significantly affect the gaming experience. All are on by default.**  
+- **Hive Knight Optimization**
+    - Description: Kills all Hivelings upon Hive Knight's death.
 
-###  Feature list
+- **Sly Optimization**
+    - Description: Adjusts the Great Slash hitbox to better match the sprites.
 
-- **CollisionFix**  
-  - Description：Fixed several collision-related bugs (usually manifested as twitching and instant attack), such as Gruz Mother stucks in the corner, Collector grabs on the ground, Watcher Knight rolls instantly, etc.
-  - Additional Notes：This bug is the most significant bug that affects the gaming experience, and it is an extremely serious design error. Fixes for some other bugs rely on this feature. It is highly recommended to turn it on.
 
-- **MultiHitFix**  
-  - Description：Fixed the bug where consecutive injuries caused invincibility time to be lost.
 
-- **RoarFix**  
-  - Description：It is now safe to skip Roar by opening the inventory. Collectors will cancel the roar when stagger.
+##  2. Auxiliary Functionality
 
-- **StuckFix**  
-  - Description：When the hitbox of some bosses overlaps with the terrain, it will pan the boss to prevent it from getting stuck outside the combat area, including Hornet Sentinel and Dung Defender.
+**These provide additional functions beneficial to practice and battles. All disabled by default.**
 
-- **StaggerFix**  
-  - Description：Fixed some bosses's staggering-related bugs, including sliding while staggering (Broken Vessel, Sheo, Lost Kin), ending staggering early (Sheo, Sly), could not stagger Dung Defender normally after entering P2, staggering Pure Vessel while in the air retains its speed at that time, Pure Vessel may focus immediately after straggering.
+###  Feature List
 
-- **AnimationFix**  
-  - Description：Fixed a number of animations that caused stuck, such as using Descending Dark to fly after using the inventory to skip the roar, killing Soul Master while getting injured would cause the battle to not end, etc.
-  - Additional Notes：It is a serious design mistake. It is recommended to turn it on (after it is turned off, you need to re-enter the archive to take effect).
+- **Freezes Removal**
+    - Description: Removes all freeze frames except those caused by the player getting hit.
 
-- **RandomSelectionFix**  
-  - Description：Fixed a bug where the boss would make abnormal moves during long battles, such as the Collector summoning three aspid in a row and the Radiance using Sword Wall continuously in P2.
-  - Additional Notes：This is a serious design mistake, but it has little impact on the gaming experience. It is recommended to turn it on.
+- **Show Stagger Info**
+    - Description: Shows cumulative stagger counter, combo stagger counter, and combo timer.
 
-- **ItemRecyclingFix**  
-  - Description：Fixed a bug where some objects could not be recycled correctly when switching scenes, such as Radiance's swords.
-  - Additional Notes：This is a serious design mistake, but it has little impact on the gaming experience. It is recommended to turn it on.
+- **Show Moving Target**
+    - Description: Shows all Dream Warriors' targets they're moving to, except Marmu.
 
-- **InvincibleFix**  
-  - Description：Fixed a bug where certain actions could keep the knight invincible.
+- **2-Hit Kill**
+    - Description: Kill enemies if able, otherwise set their health point to 1. Test friendly, avoiding Debug or Kill All issues.
 
-- **FalseKnightFix**  
-  - Description：Fixed known bugs of the False Knight, including shockwave getting bigger.
+- **Foreground Removal**
+    - Description: Removes some foreground items in The Collector battleground.
 
-- **MassiveMossChargerFix**  
-  - Description：Fixed known bugs of the Massive Moss Charger, including End charging early.
 
-- **HornetProtectorFix**  
-  - Description：Fixed known bugs of the Hornet Protector, including air dash at low altitudes.
 
-- **DungDefenderFix**  
-  - Description：Fixed known bugs of the Dung Defender, including slight deviation after landing, Special bursts are retained that should only be used at the beginning of P2.
+##  3. Bug Fixes
 
-- **双师傅修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 奥罗冲刺斩会与各种攻击拼刀、马托在奥罗冲刺斩时不格挡、在另一位师傅仍在攻击时就释放剑技（逻辑之外的剑技）、p2剑技完全消失。
+**These are major glitches reflecting serious design deficiencies. They may significantly affect the gaming experience. All are enabled by default.**
 
-- **波波修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 灵车漂移。
+###  Feature List
 
-- **三螳螂修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 螳螂领主左横冲刷脸、战斗姐妹p2结束后（进入两只螳螂的阶段）可能立刻进行攻击。
+- **Collision Fix**
+    - Description: Fixes several bugs relevant to collision (usually presents as stuck behavior or no pre-cast anim), examples: Gruz Mother stucks on the wall; The Collector grabs without leaping ("sticky feet"); Watcher Knight bouncing rolls without curling into a ball.
+    - Additional Note: This has the most significant impact on common gameplay and is an extremely serious design deficiency. Some of the bug fixes below also use this as a dependency. Very suggested to keep this enabled.
 
-- **马尔穆修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 急停霸体和反弹霸体。
+- **Multiple Hits Fix**
+    - Description: Fixes the bug where multiple hits taken by the player in a short period cause immune frame losses.
 
-- **虫母修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 死亡后小吸虫不消失。
+- **Battlecry Fix**
+    - Description: Saver inv menu battlecry cancel. The Collector will stop battlecry upon staggering.
 
-- **收藏家修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 滚滚量子纠缠、蚊子霸体、蚊子虚空碰撞箱。
+- **Wall Collision Fix**
+    - Description: When some bosses have their hitboxes collide with the battleground, this will move them to prevent them from being stuck outside (including Hornet 2 and Dung Defender).
 
-- **有翼诺斯克修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 倒车。
+- **Staggering Fix**
+    - Description: Fixes some staggering-related bugs, including staggering slide (Broken Vessel, Sheo, and Lost Kin), instant exiting staggering (Sheo and Sly), Dung Defender's abnormal combo staggering loss, Pure Vessel's abnormal speed retaining when staggered in the air, and focusing during staggering.
 
-- **二见修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 低空斜冲、斜冲卡墙、无前摇冲刺。
+- **Anim Fix**
+    - Description: Fixes several stuck bugs caused by anim, such as floating after battlecry cancelling, Soul Master's stuck second phase.
+    - Additional Note: It's a serious design deficiency. Suggest enable. After being disabled, please reload your save to have this disabled successfully.
 
-- **白芬达修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 落地后水平位移。
+- **RNG Fix**
+    - Description: Fixes the bug where bosses perform their attack abnormally in long fights, such as The Collector dropping 3 Aspids and Abs Radiance continuously summoning sword wall in plats phase.
+    - Additional Note: It's a serious design deficiency that doesn't affect common fights a lot. Suggest enable.
 
-- **前辈修复**  
-  - Description：Fixed known bugs of the Hornet Protector, including 免疫吸虫、地刺残留。
+- **Item Recycle Fix**
+    - Description: Fixes the bug where some items aren't recycled successfully upon transition, such as Radiance's remaining sword burst.
+    - Additional Note: It's a serious design deficiency that doesn't affect common fights a lot. Suggest enable.
 
-- **辐光修复**  
-   Description：Fixed known bugs of the Hornet Protector, including 光球残留碰撞箱、自缚、剑雨残留、p4光球残留。
+- **Immune Fix**
+    - Description: Fixes the bug where the player gets permanently immune by performing some certain moves.
 
--------------------------------------------------------------------------------
+- **False Knight Fix**
+    - Description: Fixes known bugs of False Knight, including abnormal shockwave scale.
+
+- **Massive Moss Charger Fix**
+    - Description: Fixes known bugs of Massive Moss Charger, including halfway burrowing.
+
+- **Hornet 1 Fix**
+    - Description: Fixes known bugs of Hornet 1, including low-altitude aerial lunge.
+
+- **Dung Defender Fix**
+    - Description: Fixes known bugs of Dung Defender, including horizontal movement after landing, and special diving retention in the second phase.
+
+- **Brothers Fix**
+    - Description: Fixes known bugs of Brothers, including Oro's Dash Slash parrying with various attacks, Mato not performing barricade when Oro Dash Slashes, unexpected nail art uses while another brother is attacking, and disappearing nail art in phase 2.
+
+- **Oblobbles Fix**
+    - Description: Fixes known bugs of Oblobbles, including unexpected movement when firing.
+
+- **Mantis Lord Fix**
+    - Description: Fixes known bugs of Mantis Lord, including left-dash mantis spawning despite the player's location (Mantis Lords) and instant attack upon one of the three defeated (Sisters of Battle).
+
+- **Marmu Fix**
+    - Description: Fixes known bugs of Marmu, including the knockback resistance while stopping suddenly and bouncing.
+
+- **Flukemarm Fix**
+    - Description: Fixes known bugs of Flukemarm, including Flukefeys not disappearing upon Flukemarm's death.
+
+- **Collector Fix**
+    - Description: Fixes known bugs of The Collector, including tangled Sharp Baldurs, the knockback resistance and the abnormal hitbox of Armored Squids.
+
+- **Winged Nosk Fix**
+    - Description: Fixes known bugs of Winged Nosk, including reverse swoop.
+
+- **Hornet 2 Fix**
+    - Description: Fixes known bugs of Hornet 2, including low-altitude aerial lunge, aerial lunge stuck on walls, and instant lunge.
+
+- **White Defender Fix**
+    - Description: Fixes known bugs of White Defender, including horizontal movement after landing.
+
+- **Pure Vessel Fix**
+    - Description: Fixes known bugs of Pure Vessel, including Flukenest immune and pillars remaining.
+
+- **Radiance Fix**
+    - Description: Fixes known bugs of Radiance, including remaining hitboxes of orbs, stuck behavior in plats phase, remaining sword rain, and remaining orb in final phase.
+
 
