@@ -1,4 +1,4 @@
-An assisting mod for HK featuring logical optimization, auxiliary functionality, bug fixes. This can improve the gaming experience significantly.
+An assisting mod for HK featuring logic optimization, auxiliary functionality, bug fixes. This can improve the gaming experience significantly.
 
 
 
@@ -12,7 +12,7 @@ An assisting mod for HK featuring logical optimization, auxiliary functionality,
 
 #  Introduction
 
-##  1. Logical Optimization
+##  1. Logic Optimization
 
 **These are non-major glitches indicating design deficiency. All are enabled by default.** 
 
