@@ -117,8 +117,8 @@ An assisting mod for HK featuring logical optimization, auxiliary functionality,
 - **Dung Defender Fix**
     - Description: Fixes known bugs of Dung Defender, including horizontal movement after landing, and special diving retention in the second phase.
 
-- **Brothers Fix**
-    - Description: Fixes known bugs of Brothers, including Oro's Dash Slash parrying with various attacks, Mato not performing barricade when Oro Dash Slashes, unexpected nail art uses while another brother is attacking, and disappearing nail art in phase 2.
+- **Nailmaster Brothers Fix**
+    - Description: Fixes known bugs of Nailmaster Brothers, including Oro's Dash Slash parrying with various attacks, Mato not performing barricade when Oro Dash Slashes, unexpected nail art uses while another brother is attacking, and disappearing nail art in phase 2.
 
 - **Oblobbles Fix**
     - Description: Fixes known bugs of Oblobbles, including unexpected movement when firing.
