@@ -10,9 +10,23 @@
 		<GameDir>C:/Program Files (x86)/Steam/steamapps/common/Hollow Knight/hollow_knight_Data/Managed</GameDir>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Resources\en.json" />
+	  <None Remove="Resources\zh.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\en.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\zh.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
 	  <PackageReference Include="MonoMod.Backports" Version="1.1.2" />
 	  <PackageReference Include="MonoMod.RuntimeDetour" Version="25.2.3" />
 	  <PackageReference Include="MonoMod.RuntimeDetour.HookGen" Version="22.7.31.1" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="System.Text.Json" Version="9.0.8" />
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp">

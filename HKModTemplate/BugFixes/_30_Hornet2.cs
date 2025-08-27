@@ -27,6 +27,12 @@ namespace MyHK.BugFixes
         {
             if (self.gameObject.name == "Hornet Boss 2" && self.FsmName == "Control")
             {
+                //低空斜冲
+                self.InsertCustomAction("ADash Antic", () =>
+                {
+                    self.FsmVariables.FindFsmFloat("Air Dash Pause").Value = 999f;
+                }, 0);
+
                 //斜冲卡墙
                 self.AddAction("A Dash", new CheckMagnitude
                 {
@@ -40,14 +46,14 @@ namespace MyHK.BugFixes
                 self.AddTransition("Check Wall", "LAND", "Land Y");
                 self.AddTransition("Check Wall", "WALL L", "Wall L");
                 self.AddTransition("Check Wall", "WALL R", "Wall R");
-                GetPosition getPosition = Util.CopyGetPosition(self.GetAction<GetPosition>("A Dash", 2));
-                FloatCompare floatCompare_T = Util.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 4));
+                GetPosition getPosition = Utils.CopyGetPosition(self.GetAction<GetPosition>("A Dash", 2));
+                FloatCompare floatCompare_T = Utils.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 4));
                 floatCompare_T.tolerance = 1f;
-                FloatCompare floatCompare_B = Util.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 5));
+                FloatCompare floatCompare_B = Utils.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 5));
                 floatCompare_B.tolerance = 0f;
-                FloatCompare floatCompare_L = Util.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 6));
+                FloatCompare floatCompare_L = Utils.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 6));
                 floatCompare_L.tolerance = 5f;
-                FloatCompare floatCompare_R = Util.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 7));
+                FloatCompare floatCompare_R = Utils.CopyFloatCompare(self.GetAction<FloatCompare>("A Dash", 7));
                 floatCompare_R.tolerance = 5f;
                 self.AddAction("Check Wall", getPosition);
                 self.AddAction("Check Wall", floatCompare_T);

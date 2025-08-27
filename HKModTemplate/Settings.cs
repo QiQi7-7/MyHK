@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MyHK.BetterLogic;
 using MyHK.BugFixes;
 using MyHK.CustomMonoBehaviour;
-using MyHK.ExtraTools;
+using MyHK.ExtraFeatures;
 
 namespace MyHK
 {
@@ -19,14 +19,14 @@ namespace MyHK
         private static ScrHeads2Fix scrHeads2Fix = new ScrHeads2Fix();
         private static DoubleJumpFix doubleJumpFix = new DoubleJumpFix();
         private static WarpFix warpFix = new WarpFix();
-        private static DetectFix detectFix = new DetectFix();
+        private static DetectionFix detectionFix = new DetectionFix();
         private static _21_HiveKnight _21_hiveKnight = new _21_HiveKnight();
         private static _29_Sly _29_sly = new _29_Sly();
 
         //辅助工具
         private static RemoveFreezeMoment removeFreezeMoment = new RemoveFreezeMoment();
         private static ShowStunInfo showStunInfo = new ShowStunInfo();
-        private static ShowMovementTarget showMovementTarget = new ShowMovementTarget();
+        private static ShowDestination showDestination = new ShowDestination();
         private static TwoHitKills twoHitKills = new TwoHitKills();
         private static RemoveForeground removeForeground = new RemoveForeground();
 
@@ -112,15 +112,15 @@ namespace MyHK
                 warpFix.Setting = value;
             }
         }
-        public int opt_DetectFix
+        public int opt_DetectionFix
         {
             get
             {
-                return detectFix.Setting;
+                return detectionFix.Setting;
             }
             set
             {
-                detectFix.Setting = value;
+                detectionFix.Setting = value;
             }
         }
         public int opt_21_HiveKnight
@@ -169,15 +169,15 @@ namespace MyHK
                 showStunInfo.Setting = value;
             }
         }
-        public int opt_ShowMovementTarget
+        public int opt_ShowDestination
         {
             get
             {
-                return showMovementTarget.Setting;
+                return showDestination.Setting;
             }
             set
             {
-                showMovementTarget.Setting = value;
+                showDestination.Setting = value;
             }
         }
         public int opt_TwoHitKills

@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Collections;
 using MyHK.CustomMonoBehaviour;
 
-namespace MyHK.ExtraTools
+namespace MyHK.ExtraFeatures
 {
     public class TwoHitKills : Module
     {

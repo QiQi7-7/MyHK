@@ -116,7 +116,7 @@ namespace MyHK.BugFixes
                 {
                     gameObject = self.GetAction<AudioStop>("Hit Voice", 0).gameObject
                 });
-                self.AddAction("Hit Voice Unroll", Util.CopyAudioPlayerOneShot(self.GetAction<AudioPlayerOneShot>("Hit Voice", 1)));
+                self.AddAction("Hit Voice Unroll", Utils.CopyAudioPlayerOneShot(self.GetAction<AudioPlayerOneShot>("Hit Voice", 1)));
                 self.InsertCustomAction("Antic", () =>
                 {
                     self.FsmVariables.GetFsmFloat("Unroll Timer").Value = 0.75f;

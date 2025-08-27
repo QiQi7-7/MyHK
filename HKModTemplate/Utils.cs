@@ -7,12 +7,21 @@ using UnityEngine;
 
 namespace MyHK
 {
-    internal static class Util
+    internal static class Utils
     {
+        public static string ReadEmbeddedResource(string resourceName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using Stream stream = assembly.GetManifestResourceStream(resourceName)
+                ?? throw new InvalidOperationException($"资源 {resourceName} 未找到。");
+            using StreamReader reader = new StreamReader(stream);
+            return reader.ReadToEnd();
+        }
+
         public static FieldInfo GetPrivateField(object _class , string _name)
         {
             return _class.GetType().GetField(_name, BindingFlags.NonPublic | BindingFlags.Instance);
-        } 
+        }
 
         public static FaceObject CopyFaceObject(FaceObject targetAction)
         {

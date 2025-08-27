@@ -27,7 +27,7 @@ namespace MyHK.BugFixes
         {
             if (self.gameObject.name == "Hornet Nosk" && self.FsmName == "Hornet Nosk")
             {
-                self.AddAction("Acid Roar End", Util.CopyFaceObject(self.GetAction<FaceObject>("Idle", 4)));
+                self.AddAction("Acid Roar End", Utils.CopyFaceObject(self.GetAction<FaceObject>("Idle", 4)));
             }
             orig(self);
         }

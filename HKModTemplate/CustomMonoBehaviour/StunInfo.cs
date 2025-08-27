@@ -49,11 +49,18 @@ namespace MyHK.CustomMonoBehaviour
                 }
                 go = new GameObject();
                 text = go.AddComponent<TextMeshPro>();
+                if(fsm.GetComponent<HealthManager>() != null)
+                {
+                    DestoryAfterDeath destoryAfterDeath = go.AddComponent<DestoryAfterDeath>();
+                    destoryAfterDeath.healthManager = fsm.GetComponent<HealthManager>();
+                    destoryAfterDeath.component = text;
+                }
                 _transform = fsm.gameObject.transform;
 
                 text.fontSize = 5;
                 text.color = color;
                 text.alignment = TextAlignmentOptions.Center;
+                go.GetComponent<MeshRenderer>().sortingOrder = 1;
             }
             else
             {

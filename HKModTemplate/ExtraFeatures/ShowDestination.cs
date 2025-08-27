@@ -9,9 +9,9 @@ using System.Collections;
 using MyHK.CustomMonoBehaviour;
 using System.Runtime.InteropServices;
 
-namespace MyHK.ExtraTools
+namespace MyHK.ExtraFeatures
 {
-    public class ShowMovementTarget : Module
+    public class ShowDestination : Module
     {
         GameObject charge;
         GameObject charge1;
@@ -23,7 +23,7 @@ namespace MyHK.ExtraTools
         GameObject charge7;
         GameObject charge8;
 
-        public ShowMovementTarget()
+        public ShowDestination()
         {
             this.Setting = 0;
         }

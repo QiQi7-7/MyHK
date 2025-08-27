@@ -6,6 +6,7 @@ using UnityEngine;
 using MonoMod.RuntimeDetour;
 using System.Reflection;
 using System.Collections;
+using MyHK.CustomMonoBehaviour;
 
 namespace MyHK.BugFixes
 {
@@ -30,22 +31,14 @@ namespace MyHK.BugFixes
             }
 
             //硬直滑行
-            if (self.gameObject.name == "Infected Knight" && self.FsmName == "Spawn Balloon")
+            if(self.gameObject.name == "Infected Knight" && self.FsmName == "IK Control")
             {
-                self.AddCustomAction("Spawn", () =>
-                {
-                    Physics2D.IgnoreCollision(self.GetAction<SpawnObjectFromGlobalPool>("Spawn", 8).storeObject.Value.GetComponent<Collider2D>(),
-                        self.gameObject.Find("Stun Hitbox").GetComponent<Collider2D>());
-                });
+                self.GetAction<SetVelocity2d>("Stunned",0).everyFrame = true;
             }
 
-            if (self.gameObject.name == "Lost Kin" && self.FsmName == "Spawn Balloon")
+            if (self.gameObject.name == "Lost Kin" && self.FsmName == "IK Control")
             {
-                self.AddCustomAction("Spawn", () =>
-                {
-                    Physics2D.IgnoreCollision(self.GetAction<SpawnObjectFromGlobalPool>("Spawn", 8).storeObject.Value.GetComponent<Collider2D>(),
-                        self.gameObject.Find("Stun Hitbox").GetComponent<Collider2D>());
-                });
+                self.GetAction<SetVelocity2d>("Stunned", 0).everyFrame = true;
             }
 
             //硬直滑行，取消硬直

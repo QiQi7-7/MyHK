@@ -9,7 +9,7 @@ using System.Collections;
 
 namespace MyHK.BetterLogic
 {
-    public class DetectFix : Module
+    public class DetectionFix : Module
     {
         public override void Load()
         {
