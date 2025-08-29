@@ -15,7 +15,7 @@ public class MyHK : Mod, IGlobalSettings<Settings>, ITogglableMod, ICustomMenuMo
     public MyHK() : base("MyHK")
     {
     }
-    public override string GetVersion() => "1.2.0.1";
+    public override string GetVersion() => "1.2.0.2";
 
     public override List<(string, string)> GetPreloadNames()
     {

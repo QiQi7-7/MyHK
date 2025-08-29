@@ -34,7 +34,21 @@ namespace MyHK.BugFixes
         private void Tk2dPlayAnimationWithEvents_OnEnter(On.HutongGames.PlayMaker.Actions.Tk2dPlayAnimationWithEvents.orig_OnEnter orig, HutongGames.PlayMaker.Actions.Tk2dPlayAnimationWithEvents self)
         {
             orig(self);
-            tk2dSpriteAnimator _sprite = (tk2dSpriteAnimator)fieldInfo.GetValue(self);
+            GameObject go = self.Fsm.GetOwnerDefaultTarget(self.gameObject);
+            tk2dSpriteAnimator _sprite;
+            if (go != null)
+            {
+                _sprite = go.GetComponent<tk2dSpriteAnimator>();
+            }
+            else
+            {
+                return;
+            }
+            if (_sprite == null)
+            {
+                return;
+            }
+
             float duration = _sprite.GetClipByName(self.clipName.Value).Duration + 0.01f;
             int index = self.State.Actions.Length - 1;
 
