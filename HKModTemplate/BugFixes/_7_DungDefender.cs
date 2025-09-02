@@ -42,34 +42,73 @@ namespace MyHK.BugFixes
                         EdgeCollider2D edge1 = chunk1.GetComponent<EdgeCollider2D>();
                         EdgeCollider2D edge2 = chunk2.GetComponent<EdgeCollider2D>();
 
-                        edge1.points = new Vector2[]
+                        if(self.gameObject.scene.name == "Waterways_05_boss")
                         {
-                            new Vector2(0, 1),
-                            new Vector2(0, 0),
-                            new Vector2(28, 0),
-                            new Vector2(28, 6),
-                            new Vector2(28, 21),
-                            new Vector2(32, 21),
-                            new Vector2(32, 32),
-                            new Vector2(0 ,32),
-                            new Vector2(0 ,1)
-                        };
-                        edge2.points = new Vector2[]
+                            if(edge1.pointCount == 12 && edge1.points[2] == new Vector2(32, 0) && edge1.points[3] == new Vector2(32, 6))
+                            {
+                                if (edge2.pointCount == 6 && edge2.points[2] == new Vector2(32, 0) && edge2.points[3] == new Vector2(32, 6))
+                                {
+                                    edge1.points = new Vector2[]
+                                    {
+                                        new Vector2(0, 1),
+                                        new Vector2(0, 0),
+                                        new Vector2(28, 0),
+                                        new Vector2(28, 10),
+                                        new Vector2(11, 10),
+                                        new Vector2(11, 11),
+                                        new Vector2(6, 11),
+                                        new Vector2(6 ,10),
+                                        new Vector2(0 ,10),
+                                        new Vector2(0, 10)
+                                    };
+                                    edge2.points = new Vector2[]
+                                    {
+                                        new Vector2(-4, 1),
+                                        new Vector2(-4, 0),
+                                        new Vector2(32, 0),
+                                        new Vector2(32, 6),
+                                        new Vector2(-4 ,6),
+                                        new Vector2(-4 ,1)
+                                    };
+                                }
+                            }
+                        }
+                        else if(self.gameObject.scene.name == "GG_Dung_Defender")
                         {
-                            new Vector2(-4, 1),
-                            new Vector2(-4, 0),
-                            new Vector2(32, 0),
-                            new Vector2(32, 32),
-                            new Vector2(0, 32),
-                            new Vector2(0, 21),
-                            new Vector2(28, 21),
-                            new Vector2(28, 6),
-                            new Vector2(-4 ,6),
-                            new Vector2(-4 ,1)
-                        };
+                            if (edge1.pointCount == 10 && edge1.points[2] == new Vector2(32, 0) && edge1.points[3] == new Vector2(32, 6))
+                            {
+                                if (edge2.pointCount == 10 && edge2.points[2] == new Vector2(32, 0) && edge2.points[3] == new Vector2(32, 32))
+                                {
+                                    edge1.points = new Vector2[]
+                                    {
+                                        new Vector2(0, 1),
+                                        new Vector2(0, 0),
+                                        new Vector2(28, 0),
+                                        new Vector2(28, 6),
+                                        new Vector2(28, 21),
+                                        new Vector2(32, 21),
+                                        new Vector2(32, 32),
+                                        new Vector2(0 ,32),
+                                        new Vector2(0 ,1)
+                                    };
+                                    edge2.points = new Vector2[]
+                                    {
+                                        new Vector2(-4, 1),
+                                        new Vector2(-4, 0),
+                                        new Vector2(32, 0),
+                                        new Vector2(32, 32),
+                                        new Vector2(0, 32),
+                                        new Vector2(0, 21),
+                                        new Vector2(28, 21),
+                                        new Vector2(28, 6),
+                                        new Vector2(-4 ,6),
+                                        new Vector2(-4 ,1)
+                                    };
+                                }
+                            }
+                        }
                     }
                 });
-                
             }
             orig(self);
         }
