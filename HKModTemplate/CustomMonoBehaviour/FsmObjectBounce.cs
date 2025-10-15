@@ -16,7 +16,7 @@ namespace MyHK.CustomMonoBehaviour
             this.rb = base.GetComponent<Rigidbody2D>();
             this.audio = base.GetComponent<AudioSource>();
             this.animator = base.GetComponent<tk2dSpriteAnimator>();
-            this.fsm = base.GetComponent<PlayMakerFSM>();
+            this.fsm = base.gameObject.LocateMyFSM("Control");
         }
 
         private void FixedUpdate()

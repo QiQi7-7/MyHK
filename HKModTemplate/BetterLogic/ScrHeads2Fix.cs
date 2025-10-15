@@ -41,7 +41,7 @@ namespace MyHK.BetterLogic
         {
             orig(self);
             GameObject scr = self.gameObject.Find("Spells").Find("Scr Heads 2");
-            if (scr.activeInHierarchy == true)
+            if (scr.activeSelf == true)
             {
                 scr.transform.localScale = new Vector3(scr.transform.localScale.x * -1, 2.5203f, 2.5203f);
             }
