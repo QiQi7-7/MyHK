@@ -9,6 +9,11 @@ namespace MyHK
 {
     internal static class Utils
     {
+        public static void Log(object message)
+        {
+            Modding.Logger.Log(message);
+        }
+
         public static string ReadEmbeddedResource(string resourceName)
         {
             var assembly = Assembly.GetExecutingAssembly();
@@ -21,6 +26,19 @@ namespace MyHK
         public static FieldInfo GetPrivateField(object _class , string _name)
         {
             return _class.GetType().GetField(_name, BindingFlags.NonPublic | BindingFlags.Instance);
+        }
+
+        public static Collision2dEvent CopyCollision2dEvent(Collision2dEvent targetAction)
+        {
+            Collision2dEvent result = new Collision2dEvent
+            {
+                collision = targetAction.collision,
+                collideTag = targetAction.collideTag,
+                sendEvent = targetAction.sendEvent,
+                storeCollider = targetAction.storeCollider,
+                storeForce = targetAction.storeForce,
+            };
+            return result;
         }
 
         public static FaceObject CopyFaceObject(FaceObject targetAction)

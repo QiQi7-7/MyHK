@@ -15,11 +15,14 @@ public class MyHK : Mod, IGlobalSettings<Settings>, ITogglableMod, ICustomMenuMo
     public MyHK() : base("MyHK")
     {
     }
-    public override string GetVersion() => "1.2.0.4";
+    public override string GetVersion() => "1.2.0.5";
 
     public override List<(string, string)> GetPreloadNames()
     {
-        return [];
+        return new List<(string, string)>
+        {
+            //("", ""),
+        };
     }
 
     public override void Initialize(Dictionary<string, Dictionary<string, GameObject>> preloadedObjects)

@@ -164,6 +164,15 @@ namespace MyHK
                         },
                         loadSetting: ()=>MyHK.mySettings.opt_ShowDestination),//显示移动目标
                     new HorizontalOption(
+                        name: GetText("ShowChasePath"),
+                        description: GetText("ShowChasePath/Description"),
+                        values: new [] {GetText("Off"), GetText("On")},
+                        applySetting: index =>
+                        {
+                            MyHK.mySettings.opt_ShowChasePath = index;
+                        },
+                        loadSetting: ()=>MyHK.mySettings.opt_ShowChasePath),//显示追踪路径
+                    new HorizontalOption(
                         name: GetText("TwoHitKills"),
                         description: GetText("TwoHitKills/Description"),
                         values: new [] {GetText("Off"), GetText("On")},
@@ -181,6 +190,15 @@ namespace MyHK
                             MyHK.mySettings.opt_RemoveForeground = index;
                         },
                         loadSetting: ()=>MyHK.mySettings.opt_RemoveForeground),//移除前景
+                    new HorizontalOption(
+                        name: GetText("AdjustBackground"),
+                        description: GetText("AdjustBackground/Description"),
+                        values: new [] {GetText("Off"), GetText("On")},
+                        applySetting: index =>
+                        {
+                            MyHK.mySettings.opt_AdjustBackground = index;
+                        },
+                        loadSetting: ()=>MyHK.mySettings.opt_AdjustBackground),//调整背景
                 }
             );
 

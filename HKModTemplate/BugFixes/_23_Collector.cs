@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Collections;
 using MyHK.CustomAction;
 using MyHK.CustomMonoBehaviour;
+//using On.HutongGames.PlayMaker.Actions;
 
 namespace MyHK.BugFixes
 {
@@ -69,6 +70,21 @@ namespace MyHK.BugFixes
                 self.AddAction("Hit Left", wait);
                 self.AddAction("Hit Up", wait);
                 self.AddAction("Hit Down", wait);
+                CheckCollisionSide ccs = new CheckCollisionSide();
+                ccs.topHit = new FsmBool(false);
+                ccs.bottomHit = new FsmBool(false);
+                ccs.leftHit = new FsmBool(false);
+                ccs.rightHit = new FsmBool(false);
+                ccs.topHitEvent = ccs.bottomHitEvent = ccs.leftHitEvent = ccs.rightHitEvent = self.GetAction<Collision2dEvent>("Lunging", 4).sendEvent;
+                ccs.otherLayer = false;
+                ccs.otherLayerNumber = 0;
+                ccs.ignoreTriggers = false;
+                self.AddAction("Lunging", ccs);
+
+                //Collision2dEvent collision2DEvent = Utils.CopyCollision2dEvent(self.GetAction<Collision2dEvent>("Lunging", 4));
+                //collision2DEvent.collision = Collision2DType.OnCollisionStay2D;
+                //self.AddAction("Lunging", collision2DEvent);
+                //collision2DEvent.Fsm.HandleCollisionStay2D = true;
 
                 BoxCollider2D boxCollider2D = self.gameObject.GetComponent<BoxCollider2D>();
                 Vector2 size = new Vector2(1.4531f, 0.9375f);

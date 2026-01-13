@@ -27,8 +27,10 @@ namespace MyHK
         private static RemoveFreezeMoment removeFreezeMoment = new RemoveFreezeMoment();
         private static ShowStunInfo showStunInfo = new ShowStunInfo();
         private static ShowDestination showDestination = new ShowDestination();
+        private static ShowChasePath showChasePath = new ShowChasePath();
         private static TwoHitKills twoHitKills = new TwoHitKills();
         private static RemoveForeground removeForeground = new RemoveForeground();
+        private static AdjustBackground adjustBackground = new AdjustBackground();
 
         //bug修复
         private static CheckCollisionSideFix checkCollisionSideFix = new CheckCollisionSideFix();
@@ -180,6 +182,17 @@ namespace MyHK
                 showDestination.Setting = value;
             }
         }
+        public int opt_ShowChasePath
+        {
+            get
+            {
+                return showChasePath.Setting;
+            }
+            set
+            {
+                showChasePath.Setting = value;
+            }
+        }
         public int opt_TwoHitKills
         {
             get
@@ -200,6 +213,17 @@ namespace MyHK
             set
             {
                 removeForeground.Setting = value;
+            }
+        }
+        public int opt_AdjustBackground
+        {
+            get
+            {
+                return adjustBackground.Setting;
+            }
+            set
+            {
+                adjustBackground.Setting = value;
             }
         }
 
