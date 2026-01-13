@@ -62,11 +62,17 @@ An assisting mod for HK featuring logic optimization, auxiliary functionality, b
 - **Show Moving Target**
     - Description: Shows all Dream Warriors' targets they're moving to, except Marmu.
 
+- **Show Chasing Path**
+    - Description: Show part of the chasing path aimed at the player, including Galien's scythe, Ooma's core, Marmu, Radiance's orbs.
+
 - **2-Hit Kill**
     - Description: Kill enemies if able, otherwise set their health point to 1. Test friendly, avoiding Debug or Kill All issues.
 
 - **Foreground Removal**
     - Description: Removes some foreground items in The Collector battleground.
+
+- **Background Adjustment**
+    - Description: Adjusts some background items in The Absolute Radiance battleground.
 
 
 
