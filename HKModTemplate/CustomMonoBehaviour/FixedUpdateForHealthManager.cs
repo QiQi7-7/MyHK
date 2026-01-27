@@ -13,6 +13,8 @@ namespace MyHK.CustomMonoBehaviour
 {
     public class FixedUpdateForHealthManager : MonoBehaviour
     {
+        private static readonly FieldInfo evasionByHitRemainingField = typeof(HealthManager).GetField("evasionByHitRemaining", BindingFlags.NonPublic | BindingFlags.Instance);
+    
         private int count;
         private bool counting;
         private HealthManager healthManager;
@@ -23,8 +25,6 @@ namespace MyHK.CustomMonoBehaviour
             count = 0;
             counting = false;
             healthManager = this.gameObject.GetComponent<HealthManager>();
-            Type healthType = healthManager.GetType();
-            fieldInfo = healthType.GetField("evasionByHitRemaining", BindingFlags.NonPublic | BindingFlags.Instance);
         }
 
         public void FixedUpdate()
@@ -34,7 +34,7 @@ namespace MyHK.CustomMonoBehaviour
                 count++;
                 if (count == 10)
                 {
-                    fieldInfo.SetValue(healthManager, -1f);
+                    evasionByHitRemainingField.SetValue(healthManager, -1f);
                     counting = false;
                 }
             }
@@ -54,7 +54,7 @@ namespace MyHK.CustomMonoBehaviour
 
         public void SpecialDeath()
         {
-            fieldInfo.SetValue(healthManager, -1f);
+            evasionByHitRemainingField.SetValue(healthManager, -1f);
             count = 0;
             counting = false;
         }
