@@ -13,12 +13,10 @@ namespace MyHK.CustomMonoBehaviour
 {
     public class FixedUpdateForHealthManager : MonoBehaviour
     {
-        private static readonly FieldInfo evasionByHitRemainingField = typeof(HealthManager).GetField("evasionByHitRemaining", BindingFlags.NonPublic | BindingFlags.Instance);
-    
         private int count;
         private bool counting;
         private HealthManager healthManager;
-        private FieldInfo fieldInfo;
+        private FieldInfo evasionByHitRemainingField = typeof(HealthManager).GetField("evasionByHitRemaining", BindingFlags.NonPublic | BindingFlags.Instance);
 
         public void Start()
         {

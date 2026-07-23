@@ -1,4 +1,4 @@
-﻿using HutongGames.PlayMaker;
+using HutongGames.PlayMaker;
 //using HutongGames.PlayMaker.Actions;
 using Modding;
 using Satchel;
@@ -17,23 +17,11 @@ namespace MyHK.BugFixes
         public override void Load()
         {
             On.PlayMakerFSM.OnEnable += PlayMakerFSM_OnEnable;
-            SetIsKinematic2d.OnEnter += SetIsKinematic2d_OnEnter;
         }
 
         public override void Unload()
         {
             On.PlayMakerFSM.OnEnable -= PlayMakerFSM_OnEnable;
-            SetIsKinematic2d.OnEnter -= SetIsKinematic2d_OnEnter;
-        }
-
-        private void SetIsKinematic2d_OnEnter(SetIsKinematic2d.orig_OnEnter orig, HutongGames.PlayMaker.Actions.SetIsKinematic2d self)
-        {
-            EdgeDetector edgeDetector = self.Owner.GetComponent<EdgeDetector>();
-            if (edgeDetector != null)
-            {
-                edgeDetector.flag = !self.isKinematic.Value;
-            }
-            orig(self);
         }
 
         private void PlayMakerFSM_OnEnable(On.PlayMakerFSM.orig_OnEnable orig, PlayMakerFSM self)
@@ -43,7 +31,6 @@ namespace MyHK.BugFixes
                 if (self.gameObject.scene.name == "GG_Hornet_2")
                 {
                     EdgeDetector edgeDetector = self.gameObject.AddComponent<EdgeDetector>();
-                    BoxCollider2D[] boxColliders = GameObject.Find("Terrain Saver").GetComponents<BoxCollider2D>();
                     edgeDetector.RightEdge = 38.06f;
                     edgeDetector.LeftEdge = 14.98f;
                 }
@@ -61,8 +48,6 @@ namespace MyHK.BugFixes
                 {
                     EdgeDetector edgeDetector = self.gameObject.AddComponent<EdgeDetector>();
                     edgeDetector.BottomEdge = 5f;
-                    edgeDetector.distance = 0.2f;
-                    edgeDetector.detectType = EdgeDetector.DetectType.easy;
                 }
             }
             orig(self);
