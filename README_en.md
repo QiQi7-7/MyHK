@@ -20,7 +20,7 @@ An assisting mod for HK featuring logic optimization, auxiliary functionality, b
 
 - **Hitting Optimizations**
     - Description: Fixes missing hits caused by frame rate. Now enemies have a fixed 0.2s immune frame independent of frame rate.
-    - Additional Note: Enabling this will also reduce the second burst of DDark by 0.2s to avoid it dealing multiple hits. After configuring this function, reload your save.
+    - Additional Note: Enabling this will also reduce the second burst of DDark by 0.02s to avoid it dealing multiple hits. After configuring this function, reload your save.
 
 - **Abyss Shriek Optimization**
     - Description: Optimizes the knockback of Abyss Shriek so that it won't be affected by the change in player orientation for the duration.
